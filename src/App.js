@@ -1,18 +1,22 @@
 import React from 'react';
+import {Router, BrowserRouter as Router} from 'react-router-dom'
 import './App.css';
 
 import Login from "./pages/Login";
 import UserProfile from "./pages/UserProfile";
 import Feed from "./pages/Feed";
-import CreateAccount from "./pages/CreateAccount";
+import SignUp from "./pages/SignUp";
 
 
 function App() {
   return (
     <div className="App">
-      {/* <CreateAccount/>
-      <Login/>
-      <UserProfile/> */}
+      <Router>
+        <Route exact path='/' component={UserProfile}/>
+        <Route exact path='/Login' component={Login}/>
+        <Route exact path='/sign-uo' component={SignUp}/>
+
+      </Router>
     </div>
   );
 }

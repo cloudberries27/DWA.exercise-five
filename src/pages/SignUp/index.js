@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CreateAccount(){
+export default function SignUp(){
     return(
         <div>
             <div>account creation woohoo</div>

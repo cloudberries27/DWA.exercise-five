@@ -6,16 +6,18 @@ import Header from "./components/Header/index"
 import Login from "./pages/Login";
 import UserProfile from "./pages/UserProfile";
 import SignUp from "./pages/SignUp";
+import LogOut from "./pages/LogOut";
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header loggedin={true} />
       <Router>
         <Route exact path='/' component={UserProfile}/>
-        <Route exact path='/Login' component={Login}/>
+        <Route exact path='/login' component={Login}/>
         <Route exact path='/sign-uo' component={SignUp}/>
+        <Route exact path='/log-out' component={LogOut}/>
       </Router>
     </div>
   );

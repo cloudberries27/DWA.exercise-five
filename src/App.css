@@ -1,2 +1,16 @@
+.Header{
+    margin: 0 auto;
+    max-width: 1040px;
+}
 
-
+.Header nav{
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px, 25px;
+}
+.Header nav a{
+    color: black;
+    display: inline-block;
+    font-size: 12px;
+}

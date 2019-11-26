@@ -3,8 +3,7 @@ import React from "react";
 export default function SignUp(){
     return(
         <div>
-            <div>account creation woohoo</div>
-            
+            <h1>account creation woohoo</h1>
         </div>
     );
 }

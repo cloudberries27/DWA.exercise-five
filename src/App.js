@@ -4,7 +4,6 @@ import './App.css';
 
 import Login from "./pages/Login";
 import UserProfile from "./pages/UserProfile";
-import Feed from "./pages/Feed";
 import SignUp from "./pages/SignUp";
 
 

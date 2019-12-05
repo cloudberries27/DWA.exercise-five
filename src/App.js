@@ -89,7 +89,7 @@ function App() {
   }
   return (
     <div className="App">
-      <Header loggedIn={loggedIn} logoutFunction={logOutFunction}/>
+      <Header loggedIn={loggedIn} logOutFunction={logOutFunction}/>
       <Router>
         <Route exact path='/'>
           {loggedIn ? <UserProfile user={user}/> : <Redirect to='/login'/>}

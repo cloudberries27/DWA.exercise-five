@@ -1,13 +1,13 @@
 import React from 'react';
 
-export default function Header(loggedIn, logoutFunction){
+export default function Header(loggedIn, logOutFunction){
     return(
         <header>
             <nav>
                 {loggedIn && <a href='/'>Home</a>}
                 {!loggedIn && <a href='/login'>Login</a>}
                 {!loggedIn && <a href='/sign-uo'>Sign Up</a>}
-                {loggedIn && <a onClick={() => logoutFunction()}> Log Out </a>}
+                {loggedIn && <a onClick={() => logOutFunction()}> Log Out </a>}
             </nav>
         </header>
     )

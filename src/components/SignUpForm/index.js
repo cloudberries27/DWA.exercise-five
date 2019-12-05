@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SignUp({submitFunction}){
     return (
-        <div>
+        <div className='signUp-comp'>
             <form onSubmit = { e => submitFunction(e) }>
                 <label htmlFor='name'> Name </label>
                 <input type='name' name='name' placeholder='Name'/>

@@ -1,16 +1,79 @@
-.Header{
+body{
+    background: black;
+    color: white;
+  }
+
+header{
     margin: 0 auto;
-    max-width: 1040px;
+    width: 100%;
 }
 
-.Header nav{
-    align-items: center;
+header nav{
+    margin: 10px 20px;
     display: flex;
     justify-content: flex-end;
-    padding: 10px, 25px;
 }
-.Header nav a{
-    color: black;
+header nav a{
+    color: white;
     display: inline-block;
-    font-size: 12px;
+    font-size: 1em;
+    padding: 10px 10px;
+    text-decoration: none;
 }
+h1{
+    display: flex;
+    font-size: 7em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .signUp-page{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10em;
+  }
+
+  input[type=name] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  button{
+    color: white;
+    background-color: Transparent;
+    font-size: large;
+    transition: all 0.5s;
+    position: relative;
+    border: 1px solid white;
+    line-height: 50px;;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    width: 40%;
+  }
+  button:hover{
+    border-radius: 25px;
+  }

@@ -1,5 +1,5 @@
 import React from "react";
 
-export function UserInformation() {
+export default function UserInformation() {
     return <div>UserInformation</div>
 }

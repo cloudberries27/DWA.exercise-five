@@ -22,6 +22,7 @@ const firebaseConfig = {
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [user, setUser] = useState({});
 
   useEffect(()=> {
     if(!firebase.apps.length){
@@ -39,11 +40,13 @@ function App() {
     firebase.auth().onAuthStateChanged(function(user){
       if (user){
         setLoggedIn(true);
+        setUser(user);
       }else{
         setLoggedIn(false);
+        setUser({});
       }
     });
-  }, [])
+  }, []);
 
   function signUpFunction(e){
     e.preventDefault();
@@ -77,7 +80,7 @@ function App() {
     firebase
       .auth()
       .signOut()
-      .then(function(response){
+      .then(function(){
         setLoggedIn(false);
       })
       .catch(function(error) {
@@ -86,12 +89,12 @@ function App() {
   }
   return (
     <div className="App">
-      <Header loggedIn={loggedIn, logOutFunction}/>
+      <Header loggedIn={loggedIn} logoutFunction={logOutFunction}/>
       <Router>
         <Route exact path='/'>
-          {loggedIn ? <UserProfile/> : <Redirect to='/login'/>}
+          {loggedIn ? <UserProfile user={user}/> : <Redirect to='/login'/>}
         </Route>
-        <Route exact path='/sign-uo'>
+        <Route exact path='/sign-up'>
           {loggedIn ?  <Redirect to='/' /> : <SignUp signUpFunction = {signUpFunction}/> }
         </Route>
         <Route exact path='/login'>

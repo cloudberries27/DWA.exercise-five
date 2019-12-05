@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Login({submitFunction}){
+export default function LoginForm({submitFunction}){
     return (
         <div>
             <form onSubmit={e=>submitFunction(e)}>

@@ -1,11 +1,12 @@
 import React from "react";
-import { UserInformation } from "../../components/UserProfileComponents/index";
+import UserInformation from "../../components/UserProfileComponents/index";
 
-export default function UserProfile(){
-    return(
-        <div>
-            <div>UserProfile</div>
-            <UserInformation/>
-        </div>
-    );
+export default function UserProfile({ user }){
+    console.log('user', user);
+	return (
+		<div>
+			<h1>UserProfile for {user.uid && user.uid}</h1>
+			<UserInformation email={user.email ? user.email : 'oh no'}/>
+		</div>
+	);
 }

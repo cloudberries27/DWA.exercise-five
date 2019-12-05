@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Header(loggedIn, logOutFunction){
+export default function Header({loggedIn, logOutFunction}){
     return(
         <header>
             <nav>

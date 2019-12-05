@@ -4,10 +4,10 @@ export default function LoginForm({submitFunction}){
     return (
         <div>
             <form onSubmit={e=>submitFunction(e)}>
-                <label htmlFor='email'> Email </label>
-                <input type='email' name='email' placeholder='email'/>
-                <label htmlFor='password'> Password </label>
-                <input type='password' name='password' placeholder="password"/>
+                <label htmlFor='loginEmail'> Email </label>
+                <input type='email' name='loginEmail' placeholder='Email'/>
+                <label htmlFor='loginPassword'> Password </label>
+                <input type='password' name='loginPassword' placeholder="Password"/>
                 <button>Login</button>
             </form>
         </div>
